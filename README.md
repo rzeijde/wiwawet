@@ -1,4 +1,4 @@
-# wiwawet
+# wiwawet https://fri-fra-frischi.netlify.app/
 
 ## Description
 Tells if ventilating a room or building makes sense taking temperature and humidity into account.
