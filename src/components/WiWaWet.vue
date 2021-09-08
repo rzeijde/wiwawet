@@ -71,6 +71,25 @@
           </v-card>
         </v-col>
       </v-row>
+              <v-row no-gutters>
+          <v-col
+            class="text-left"
+            cols="12"
+            sm="12"
+        >
+          <v-card
+              class="pa-2"
+              tile
+          >
+                <v-icon large
+                        color="info"
+                >
+                  mdi-water-outline
+                </v-icon>
+                {{absHumInside}} g/m³
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
 
     <v-container class="grey lighten-5">
@@ -137,6 +156,25 @@
 
           </v-card>
         </v-col>
+        </v-row>
+        <v-row no-gutters>
+          <v-col
+            class="text-left"
+            cols="12"
+            sm="12"
+        >
+          <v-card
+              class="pa-2"
+              tile
+          >
+                <v-icon large
+                        color="info"
+                >
+                  mdi-water-outline
+                </v-icon>
+                {{absHumOutside}} g/m³
+          </v-card>
+        </v-col>
       </v-row>
     </v-container>
   </div>
@@ -159,7 +197,20 @@ export default {
   computed: {
     ventilate: function () {
       return this.humOutside.val - 3 * (this.tempInside.val - this.tempOutside.val) < this.humInside.val
-    }
+    },
+    absHumInside: function () {
+      var t = this.tempInside.val
+      var r = this.humInside.val
+      var ah = 13.2471*Math.pow(Math.E,17.67*t/(t+243.5))*r/(273.15+t);
+      return Math.round(ah*100)/100
+    },
+    absHumOutside: function () {
+      var t = this.tempOutside.val
+      var r = this.humOutside.val
+      var ah = 13.2471*Math.pow(Math.E,17.67*t/(t+243.5))*r/(273.15+t);
+      return Math.round(ah*100)/100
+    },
+
   }
 }
 </script>
