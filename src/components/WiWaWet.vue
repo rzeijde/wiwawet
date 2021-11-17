@@ -99,7 +99,7 @@
             sm="12"
                         align="left"
         >
-            <v-icon large color="success ma-5" class="mr-1">mdi-pine-tree</v-icon>Outside
+            <v-icon large color="success ma-5" class="mr-1">mdi-pine-tree</v-icon>
         </v-col>
         <v-col
             cols="12"
