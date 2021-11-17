@@ -3,20 +3,13 @@
     <v-container class="grey lighten-5">
       <v-row no-gutters>
         <v-col
-            cols="12"
-            sm="2"
+            cols="6"
+            align="left"
         >
-            <v-icon large color="info" class="mr-1">mdi-home</v-icon>Inside
-          
+            <v-icon large color="info" class="mr-1">mdi-home</v-icon>
         </v-col>
         <v-col
-            cols="12"
-            sm="8"
-        >          
-        </v-col>
-        <v-col
-            cols="12"
-            sm="2"
+            cols="6"
             align="right"
         >
                 <div v-if="ventilate">
@@ -25,7 +18,6 @@
     <div v-if="!ventilate">
       <v-icon x-large color="error" class="mr-1">mdi-window-close</v-icon>
     </div>
-          
         </v-col>
         <v-col
             cols="12"
@@ -104,7 +96,8 @@
       <v-row no-gutters>
         <v-col
             cols="12"
-            sm="2"
+            sm="12"
+                        align="left"
         >
             <v-icon large color="success ma-5" class="mr-1">mdi-pine-tree</v-icon>Outside
         </v-col>
